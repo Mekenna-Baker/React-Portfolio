@@ -47,6 +47,8 @@ const projectsInfo = [
     },
 ];
 
+// Create a function to render the project info and cards //
+
 const Projects = () => {
     return (
         <div>
