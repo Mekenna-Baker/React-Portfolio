@@ -23,10 +23,10 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            
+
                             {/*Navbar list items with navlink to navigate to corresponding part of the website when the file path matches  */}
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/" exact>About Me</NavLink>
+                                <NavLink className="nav-link" to="/" >About Me</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/projects">Projects</NavLink>

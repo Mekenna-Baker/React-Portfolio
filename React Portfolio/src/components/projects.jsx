@@ -4,46 +4,46 @@ import React from 'react';
 
 const projectsInfo = [
     {
-        title: 'Project 1',
-        description: 'description of project 1',
-        image: 'image path',
-        deployedLink: 'deployed project link',
-        repoLink: 'github repo link'
+        title: 'Weather to Wear',
+        description: 'A weather app that provides the weather in the users area, and recommends basic outfits based on the weather.',
+        image: '/public/images/weathertowear.PNG',
+        deployedLink: 'https://kevinkerman1.github.io/group-project-1/',
+        repoLink: 'https://github.com/KevinKerman1/group-project-1'
     },
     {
-        title: 'Project 2',
-        description: 'description of project 2',
-        image: 'image path',
-        deployedLink: 'deployed project link',
-        repoLink: 'github repo link'
+        title: 'Practice Portfolio Page',
+        description: 'A practice portfolio page to work on HTML and CSS skills.',
+        image: 'public/images/portfolio_img.PNG',
+        deployedLink: 'https://mekenna-baker.github.io/Week-2-challenge/',
+        repoLink: 'https://github.com/Mekenna-Baker/Week-2-challenge'
     },
     {
-        title: 'Project 3',
-        description: 'description of project 3',
-        image: 'image path',
-        deployedLink: 'deployed project link',
-        repoLink: 'github repo link'
+        title: 'Employee Database Tracker',
+        description: 'A command-line app that allows the user to view, add, and update employee information in a database.',
+        image: '/public/images/employee_tracker_img.PNG',
+        deployedLink: 'https://github.com/Mekenna-Baker/Employee-Tracker',
+        repoLink: 'https://github.com/Mekenna-Baker/Employee-Tracker'
     },
     {
-        title: 'Project 4',
-        description: 'description of project 4',
-        image: 'image path',
-        deployedLink: 'deployed project link',
-        repoLink: 'github repo link'
+        title: 'Vehicle Builder',
+        description: 'A command-line app that allows the user to create a new vehicle, or perform action(s) on an existing vehicle.',
+        image: 'public/images/vehicle_builder_img.PNG',
+        deployedLink: 'https://github.com/Mekenna-Baker/Vehicle-Builder',
+        repoLink: 'https://github.com/Mekenna-Baker/Vehicle-Builder'
     },
     {
-        title: 'Project 5',
-        description: 'description of project 5',
-        image: 'image path',
-        deployedLink: 'deployed project link',
-        repoLink: 'github repo link'
+        title: 'ReadMe Generator',
+        description: 'A command-line app that generates a ReadMe file based on user input.',
+        image: 'public/images/readme.generator_img.PNG',
+        deployedLink: 'https://github.com/Mekenna-Baker/ReadMe.generator',
+        repoLink: 'https://github.com/Mekenna-Baker/ReadMe.generator'
     },
     {
         title: 'Project 6',
-        description: 'description of project 6',
-        image: 'image path',
-        deployedLink: 'deployed project link',
-        repoLink: 'github repo link'
+        description: 'An app that allows a user to play Rock, Paper, Scissors against the computer.',
+        image: 'public/images/rock-paper-scissors_img.PNG',
+        deployedLink: 'https://github.com/Mekenna-Baker/Rock-Paper-Scissors',
+        repoLink: 'https://github.com/Mekenna-Baker/Rock-Paper-Scissors'
     },
 ];
 
@@ -51,10 +51,36 @@ const projectsInfo = [
 
 const Projects = () => {
     return (
-        <div>
-            <h1>Projects</h1>
-            <p>This is the projects section</p>
-        </div>
+        <section id="projects" className="container mt-5">
+            <h2>My Projects</h2>
+
+            <div className="row">
+                {/* Using map to iterate through the array and generate a new card for each project*/}
+                {projectsInfo.map((project, index) => (
+
+                    <div className="col-md-4 mb-4" key={index}>
+                        <div className="card">
+                            <img src={project.image} className="card-img-top" alt={project.title} />
+                            <div className="card-body">
+
+                                <h5 className="card-title">{project.title}</h5>
+                                <p className="card-text">{project.description}</p>
+
+                                {/* The projects' deployed links */}
+                                <a href={project.deployedLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                    Deployed Project
+                                </a>
+                                {/* The projects' repository links */}
+                                <a href={project.repoLink} className="btn btn-secondary ml-2" target="_blank" rel="noopener noreferrer">
+                                    Project Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
     );
 };
 
