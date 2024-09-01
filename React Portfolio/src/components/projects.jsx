@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Projects.css';
 
 // Create an array of objects to hold the project data //
 
