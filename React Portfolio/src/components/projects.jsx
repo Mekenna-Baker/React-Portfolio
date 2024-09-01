@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Create an aray of objects to hold the project data //
+// Create an array of objects to hold the project data //
 
 const projectsInfo = [
     {
