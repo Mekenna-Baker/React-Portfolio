@@ -8,6 +8,7 @@
 
 .navbar {
     background-color: var(--color-green) !important;
+    padding: 15px 20px;
 }
 
 .navbar-brand {

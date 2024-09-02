@@ -8,7 +8,6 @@
 
 body {
     background-color: var(--color-sand);
-    color: var(--color-gray);
     /* add font family */
 }
 
@@ -16,22 +15,5 @@ h2 p {
     color: var(--color-brown);
 }
 
-a {
-    color: var(--color-yellow);
-}
 
-button {
-    background-color: var(--color-muted-green);
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.25s ease-in;
-}
-
-button:hover {
-    background-color: var(--color-clay-brown);
-    color: #FFFFFF;
-}
 

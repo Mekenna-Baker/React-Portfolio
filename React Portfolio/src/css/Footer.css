@@ -6,7 +6,23 @@
     --color-yellow: #e1b382;
 }
 
-.footer {
+footer {
     background-color: var(--color-gray);
     color: var(--color-sand);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--color-yellow);
+    transition: color 0.25s ease-in;
+    font-size: 2rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.25s ease-in, text-decoration-color 0.25s ease-in;
+}
+
+footer a:hover, footer a:focus {
+    color: var(--color-warm-yellow); 
+    text-decoration-color: var(--color-warm-yellow); 
 }

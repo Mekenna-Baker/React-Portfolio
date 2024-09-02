@@ -1,0 +1,84 @@
+:root {
+    --color-muted-green: #4A7C59;
+    --color-clay-brown: #8D5A4C;
+    --color-soft-sand: #D9C4A0;
+    --color-slate-gray: #2F4F4F;
+    --color-warm-yellow: #E1B382;
+}
+
+#projects {
+    background-color: var(--color-soft-sand);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: var(--color-clay-brown);
+    color: var(--color-soft-sand);
+}
+
+.card-title {
+    color: var(--color-warm-yellow);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--color-soft-sand);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: var(--color-muted-green);
+    border: none;
+    color: var(--color-soft-sand); 
+    transition: all 0.25s ease-in; 
+
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--color-warm-yellow); 
+    color: var(--color-slate-gray); 
+}
+
+.btn-secondary {
+    background-color: var(--color-slate-gray); 
+    border: none;
+    color: var(--color-soft-sand); 
+    margin-left: 10px;
+    transition: all 0.25s ease-in; 
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: var(--color-muted-green); 
+    color: var(--color-soft-sand); 
+}
+
+.btn-primary, .btn-secondary {
+    text-align: center;
+    padding: 10px 20px; 
+    flex: 1;
+}
+
+.card-img-top {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0; 
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-muted-green);
+    margin-bottom: 50px;
+}
