@@ -1,0 +1,35 @@
+:root {
+    --color-green: #4a7c59; 
+    --color-brown: #8d5a4c;
+    --color-sand: #d9c4a0;
+    --color-gray: #2f4f4f;
+    --color-yellow: #e1b382;
+}
+
+.navbar {
+    background-color: var(--color-green) !important;
+}
+
+.navbar-brand {
+    color: var(--color-sand);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: var(--color-warm-yellow);
+    transition: color 0.25s ease-in;
+}
+
+.nav-link {
+    color: var(--color-sand);
+    transition: color 0.25s ease-in;
+}
+
+.nav-link:hover {
+    color: var(--color-warm-yellow);
+    transition: color 0.25s ease-in;
+}
+
+
+

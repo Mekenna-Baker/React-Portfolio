@@ -1,0 +1,12 @@
+:root {
+    --color-green: #4a7c59; 
+    --color-brown: #8d5a4c;
+    --color-sand: #d9c4a0;
+    --color-gray: #2f4f4f;
+    --color-yellow: #e1b382;
+}
+
+.footer {
+    background-color: var(--color-gray);
+    color: var(--color-sand);
+}
