@@ -1,10 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFaceSmile } from '@fortawesome/free-regular-svg-icons';
 import '../css/AboutMe.css';
 
 const AboutMe = () => {
     return (
         <div>
-            <h1>About Me</h1>
+            <h2>About Me <FontAwesomeIcon icon={faFaceSmile} /></h2>
             <p>
                 This is an about me
             </p>

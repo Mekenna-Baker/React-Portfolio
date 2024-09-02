@@ -23,7 +23,7 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav ms-auto">
 
                             {/*Navbar list items with navlink to navigate to corresponding part of the website when the file path matches  */}
                             <li className="nav-item">

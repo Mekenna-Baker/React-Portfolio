@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import '../css/Contact.css';
 
 const Contact = () => {
@@ -39,7 +41,7 @@ const Contact = () => {
 
     return (
         <section className="container mt-5">
-            <h2>Contact Me</h2>
+            <h2>Contact Me <FontAwesomeIcon icon={faEnvelope} /></h2>
             <form>
                 {/* Name input */}
                 <div className="mb-3">

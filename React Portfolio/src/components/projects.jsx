@@ -40,7 +40,7 @@ const projectsInfo = [
         repoLink: 'https://github.com/Mekenna-Baker/ReadMe.generator'
     },
     {
-        title: 'Project 6',
+        title: 'Rock, Paper, Scissors',
         description: 'An app that allows a user to play Rock, Paper, Scissors against the computer.',
         image: 'public/images/rock-paper-scissors_img.PNG',
         deployedLink: 'https://github.com/Mekenna-Baker/Rock-Paper-Scissors',
