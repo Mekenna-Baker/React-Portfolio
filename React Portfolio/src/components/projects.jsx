@@ -6,28 +6,28 @@ import '../css/Projects.css';
 const projectsInfo = [
     {
         title: 'Weather to Wear',
-        description: 'A weather app that provides the weather in the users area, and recommends basic outfits based on the weather.',
+        description: 'A weather app that provides the weather in the users area, and recommends basic outfits.',
         image: '/public/images/weathertowear.PNG',
         deployedLink: 'https://kevinkerman1.github.io/group-project-1/',
         repoLink: 'https://github.com/KevinKerman1/group-project-1'
     },
     {
         title: 'Practice Portfolio Page',
-        description: 'A practice portfolio page to work on HTML and CSS skills.',
+        description: 'A practice portfolio page that helped me practice my newfound CSS skills.',
         image: 'public/images/portfolio_img.PNG',
         deployedLink: 'https://mekenna-baker.github.io/Week-2-challenge/',
         repoLink: 'https://github.com/Mekenna-Baker/Week-2-challenge'
     },
     {
         title: 'Employee Database Tracker',
-        description: 'A command-line app that allows the user to view, add, and update employee information in a database.',
+        description: 'A command-line app that allows the user to view, add, and update employee information.',
         image: '/public/images/employee_tracker_img.PNG',
         deployedLink: 'https://github.com/Mekenna-Baker/Employee-Tracker',
         repoLink: 'https://github.com/Mekenna-Baker/Employee-Tracker'
     },
     {
         title: 'Vehicle Builder',
-        description: 'A command-line app that allows the user to create a new vehicle, or perform action(s) on an existing vehicle.',
+        description: 'A command-line app that allows the user to create a new vehicle, or perform action(s).',
         image: 'public/images/vehicle_builder_img.PNG',
         deployedLink: 'https://github.com/Mekenna-Baker/Vehicle-Builder',
         repoLink: 'https://github.com/Mekenna-Baker/Vehicle-Builder'

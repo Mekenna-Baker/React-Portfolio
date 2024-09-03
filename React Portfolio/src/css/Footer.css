@@ -1,28 +1,25 @@
 :root {
-    --color-green: #4a7c59; 
-    --color-brown: #8d5a4c;
-    --color-sand: #d9c4a0;
-    --color-gray: #2f4f4f;
-    --color-yellow: #e1b382;
+    --main-color: #fdf6e3;
+    --dark-accent: #3e5452;
+    --light-accent: #607b80;
 }
 
+
 footer {
-    background-color: var(--color-gray);
-    color: var(--color-sand);
+    background-color: var(--main-color);
     padding: 20px;
     text-align: center;
 }
 
 footer a {
-    color: var(--color-yellow);
+    color: var(--dark-accent);
     transition: color 0.25s ease-in;
     font-size: 2rem;
     margin: 0 10px;
     text-decoration: none;
-    transition: color 0.25s ease-in, text-decoration-color 0.25s ease-in;
 }
 
-footer a:hover, footer a:focus {
-    color: var(--color-warm-yellow); 
-    text-decoration-color: var(--color-warm-yellow); 
+footer a:hover,
+footer a:focus {
+    color: var(--light-accent);
 }

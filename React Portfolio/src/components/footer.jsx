@@ -5,7 +5,7 @@ import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-i
 
 const Footer = () => {
     return (
-        <footer>
+        <footer >
             <a href="https://github.com/Mekenna-Baker" target="_blank">
                 <FontAwesomeIcon icon={faGithub} /> </a>
 

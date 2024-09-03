@@ -1,10 +1,34 @@
-.resume-download .btn {
-    background-color: #007BFF;
+:root {
+    --main-color: #fdf6e3;
+    --dark-accent: #3e5452;
+    --light-accent: #607b80;
+}
+
+.resume-container {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.resume-download {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.resume-button {
+    background-color: var(--dark-accent);
     border-radius: 5px;
+    color: var(--main-color);
+    display: inline-block;
     padding: 10px 20px;
-    color: #fff;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
+    width: auto;
+}
+
+.resume-button:visited {
+    color: var(--main-color);
+
 }
 
