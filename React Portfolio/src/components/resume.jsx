@@ -3,9 +3,10 @@ import '../css/Resume.css';
 
 const Resume = () => {
     return (
-        <div>
-            <h2>Resume</h2>
-            <p>This is the resume section</p>
+        <div className="resume-download btn btn-primary">
+            <a href="public/MekennaBaker_CV.docx"
+            download="MekennaBaker_CV.docx">Download My Resume
+            </a>
 
             {/* a tag with href to resume.pdf */}
 

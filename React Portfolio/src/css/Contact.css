@@ -1,0 +1,16 @@
+form input, form textarea, form button {
+    margin-bottom: 10px; /* Reduce margin between elements */
+    padding: 100px; /* Adjust padding to make elements more compact */
+    font-size: 14px; /* Adjust the font size if necessary */
+}
+
+form {
+    margin: 0 auto;
+    padding: 10px; /* Reduce padding inside the form */
+    width: 100%; /* Make form take up less horizontal space */
+    max-width: 550px; /* Set a maximum width for the form */
+}
+
+form button {
+align-items: center;
+}
