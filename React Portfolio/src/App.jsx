@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //Allows use of Navlink, that will auto update the URL and trigger rendering of correct component without reloading //
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
