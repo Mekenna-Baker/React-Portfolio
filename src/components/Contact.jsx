@@ -8,13 +8,14 @@ const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     // Create a state to hold the errors
     const [errors, setErrors] = useState({})
+    // Create a state to hold the submission
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     // Function to validate email
     const validateEmail = (email) => {
         // Finding the index of @ and .
         const atIndex = email.indexOf('@');
         const dotIndex = email.lastIndexOf('.');
-
         // Returning true if the email is valid                                                            
         return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1;
     };
@@ -37,12 +38,37 @@ const Contact = () => {
             delete newErrors[e.target.name];
             setErrors(newErrors);
         }
-    }
+    };
+
+    // Function to handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        //validate fields
+        const newErrors = {};
+        if (!formData.name) newErrors.name = 'Name is required!';
+        if (!formData.email) {
+            newErrors.email = 'Email is required!';
+        } else if (!validateEmail(formData.email)) {
+            newErrors.email = 'Please enter a valid email address!';
+        }
+        if (!formData.message) newErrors.message = 'Message is required!';
+
+        setErrors(newErrors);
+
+        // If there are no errors, submit the form
+        if (Object.keys(newErrors).length === 0) {
+            setIsSubmitted(true);
+            setFormData({ name: '', email: '', message: '' });
+        }
+    };
+
 
     return (
         <section className="container mt-5">
             <h2>Contact Me <FontAwesomeIcon icon={faEnvelope} /></h2>
-            <form>
+            {isSubmitted && <p className="alert alert-success">Form submitted successfully!</p>}
+            <form onSubmit={handleSubmit}>
                 {/* Name input */}
                 <div className="mb-3">
                     <input
@@ -83,13 +109,15 @@ const Contact = () => {
                         type="text"
                         name="message"
                         placeholder="Enter your message here"
-                        className="form-control"
+                        className={`form-control ${errors.message ? 'is-invalid' : ''}`}
                         value={formData.message}
                         // Update formData state on input change
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         // Validates when cursor leaves the input field
                         onBlur={validateField}
-                    />
+                        aria-invalid={!!errors.message}
+                        aria-describedby="messageError"
+                        />
                     {/* Display error message if the message is invalid */}
                     {errors.message && <p className="text-danger">{errors.message}</p>}
                 </div>
