@@ -1,34 +1,64 @@
-:root {
-    --main-color: #fdf6e3;
-    --dark-accent: #3e5452;
-    --light-accent: #607b80;
+.skills-boxes {
+    display: flex;
+    justify-content: center; /* Centers the boxes horizontally */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too narrow */
+    gap: 20px; /* Adds spacing between the boxes */
+    margin-top: 40px; /* Adds spacing above the boxes */
 }
 
-.resume-container {
+.skill-box {
+    background-color: var(--main-color);
+    border: 2px solid var(--dark-accent);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     text-align: center;
-    margin-top: 50px;
-    
+    width: 250px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.skill-box:hover {
+    transform: scale(1.05); /* Slightly increases size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.skill-box h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--dark-accent);
+}
+
+.skill-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-box ul li {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: var(--light-accent);
 }
 
 .resume-download {
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.resume-button {
-    background-color: var(--dark-accent);
-    border-radius: 5px;
-    color: var(--main-color);
-    display: inline-block;
-    padding: 10px 20px;
+    margin-top: 40px;
     text-align: center;
-    text-decoration: none;
-    transition: 0.3s ease;
-    width: auto;
 }
 
-.resume-button:visited {
-    color: var(--main-color);
+.download-btn {
+    padding: 10px 20px;
+    background-color: var(--dark-accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
+.download-btn:hover {
+    background-color: var(--light-accent);
 }
 
