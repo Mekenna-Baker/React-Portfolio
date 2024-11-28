@@ -1,14 +1,11 @@
-:root {
-    --main-color: #fdf6e3;
-    --dark-accent: #3e5452;
-    --light-accent: #607b80;
-}
-
-
 footer {
     background-color: var(--main-color);
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    position: relative; /* Ensure normal document flow */
+    bottom: 0; /* Anchor it at the bottom if needed */
+    box-sizing: border-box; /* Prevent padding from breaking the layout */
 }
 
 footer a {
@@ -19,7 +16,6 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover,
-footer a:focus {
+footer a:hover, footer a:focus {
     color: var(--light-accent);
 }

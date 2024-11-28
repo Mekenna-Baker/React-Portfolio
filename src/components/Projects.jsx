@@ -6,21 +6,21 @@ import '../css/Projects.css';
 const projectsInfo = [
     {
         title: 'Weather to Wear',
-        description: 'A weather app that provides the weather in the users area, and recommends basic outfits.',
+        description:'Provides user with an outfit suggestion based off of the weather in the requested location. ',
         image: './images/weathertowear.PNG',
         deployedLink: 'https://kevinkerman1.github.io/group-project-1/',
         repoLink: 'https://github.com/KevinKerman1/group-project-1'
     },
     {
         title: 'Color Canvas',
-        description: 'ColorCanvas is a creation tool and creating sharing platform that lets users create and share images on our website. It was made to inspire creativity in users.',
+        description: 'Allows a user to create, save, and delete an art project that they drew.',
         image: './images/color_canvas.PNG',
         deployedLink: 'https://mekenna-baker.github.io/Week-2-challenge/',
         repoLink: 'https://github.com/Mekenna-Baker/Color-Canvas'
     },
     {
         title: 'JobHub',
-        description: 'JobHub is a comprehensive job and task management application designed to streamline the assignment of jobs, scheduling, and employee management for small to medium-sized businesses',
+        description: 'Create, update, and delete customers, employees and their associated jobs.',
         image: './images/jobhub.PNG',
         deployedLink: 'https://jobhub-fxiq.onrender.com',
         repoLink: 'https://github.com/Mekenna-Baker/JobHub'
@@ -41,7 +41,7 @@ const projectsInfo = [
     },
     {
         title: 'Rock, Paper, Scissors',
-        description: 'An app that allows a user to play Rock, Paper, Scissors against the computer.',
+        description: 'Play rock, paper, scissors against the computer!',
         image: '../images/rock-paper-scissors_img.PNG',
         deployedLink: 'https://github.com/Mekenna-Baker/Rock-Paper-Scissors',
         repoLink: 'https://github.com/Mekenna-Baker/Rock-Paper-Scissors'
