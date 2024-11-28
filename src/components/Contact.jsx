@@ -4,126 +4,114 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import '../css/Contact.css';
 
 const Contact = () => {
-    // Create a state to hold the form data
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    // Create a state to hold the errors
-    const [errors, setErrors] = useState({})
-    // Create a state to hold the submission
+    const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // Function to validate email
     const validateEmail = (email) => {
-        // Finding the index of @ and .
         const atIndex = email.indexOf('@');
         const dotIndex = email.lastIndexOf('.');
-        // Returning true if the email is valid                                                            
         return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1;
     };
 
-    // Function to validate field(s)
     const validateField = (e) => {
-        // Checking if input field is empty
-        if (!e.target.value) {
-            // If empty, set the error message
-            setErrors({ ...errors, [e.target.name]: `${e.target.name} is required!` });
-
-            // Checking if the email is valid
-        } else if (e.target.name === 'email' && !validateEmail(e.target.value)) {
-            // If email is not valid, set the error message
-            setErrors({ ...errors, email: 'Please enter a valid email address!' })
-
-            // If information is valid, remove the error message
+        const { name, value } = e.target;
+        if (!value) {
+            setErrors((prev) => ({ ...prev, [name]: `${name} is required!` }));
+        } else if (name === 'email' && !validateEmail(value)) {
+            setErrors((prev) => ({ ...prev, email: 'Please enter a valid email address!' }));
         } else {
-            const newErrors = { ...errors };
-            delete newErrors[e.target.name];
-            setErrors(newErrors);
+            setErrors((prev) => {
+                const updatedErrors = { ...prev };
+                delete updatedErrors[name];
+                return updatedErrors;
+            });
         }
     };
 
-    // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        //validate fields
         const newErrors = {};
         if (!formData.name) newErrors.name = 'Name is required!';
-        if (!formData.email) {
-            newErrors.email = 'Email is required!';
-        } else if (!validateEmail(formData.email)) {
-            newErrors.email = 'Please enter a valid email address!';
-        }
+        if (!formData.email) newErrors.email = 'Email is required!';
+        else if (!validateEmail(formData.email)) newErrors.email = 'Please enter a valid email address!';
         if (!formData.message) newErrors.message = 'Message is required!';
-
         setErrors(newErrors);
 
-        // If there are no errors, submit the form
         if (Object.keys(newErrors).length === 0) {
             setIsSubmitted(true);
+            setTimeout(() => setIsSubmitted(false), 5000); // Success message visible for 5 seconds
             setFormData({ name: '', email: '', message: '' });
         }
     };
 
-
     return (
-        <section className="container mt-5">
-            <h2>Contact Me <FontAwesomeIcon icon={faEnvelope} /></h2>
+        <section id= 'contact-page' className="container mt-5">
+            <h2>
+                Contact Me <FontAwesomeIcon icon={faEnvelope} />
+            </h2>
             {isSubmitted && <p className="alert alert-success">Form submitted successfully!</p>}
-            <form onSubmit={handleSubmit}>
-                {/* Name input */}
+            <form onSubmit={handleSubmit} noValidate>
+                {/* Name Input */}
                 <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                        Name
+                    </label>
                     <input
+                        id="name"
                         type="text"
                         name="name"
                         placeholder="Name"
-                        className="form-control"
+                        className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                         value={formData.name}
-                        // Update formData state on input change
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        // Validates when cursor leaves the input field
                         onBlur={validateField}
+                        aria-describedby="nameError"
                     />
-                    {/* Display error message if name is empty */}
-                    {errors.name && <p className="text-danger">{errors.name}</p>}
+                    {errors.name && <div id="nameError" className="text-danger">{errors.name}</div>}
                 </div>
 
-                {/* Email input */}
+                {/* Email Input */}
                 <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                        Email Address
+                    </label>
                     <input
+                        id="email"
                         type="email"
                         name="email"
                         placeholder="Email Address"
-                        className="form-control"
+                        className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                         value={formData.email}
-                        // Update formData state on input change
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        // Validates when cursor leaves the input field
                         onBlur={validateField}
+                        aria-describedby="emailError"
                     />
-                    {/* Display error message if email is empty or invalid */}
-                    {errors.email && <p className="text-danger">{errors.email}</p>}
+                    {errors.email && <div id="emailError" className="text-danger">{errors.email}</div>}
                 </div>
 
-                {/* Message input */}
+                {/* Message Input */}
                 <div className="mb-3">
+                    <label htmlFor="message" className="form-label">
+                        Message
+                    </label>
                     <textarea
-                        type="text"
+                        id="message"
                         name="message"
                         placeholder="Enter your message here"
-                        className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+                       className={`form-control contact-text  ${errors.message ? 'is-invalid' : ''}`}
                         value={formData.message}
-                        // Update formData state on input change
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        // Validates when cursor leaves the input field
                         onBlur={validateField}
-                        aria-invalid={!!errors.message}
                         aria-describedby="messageError"
-                        />
-                    {/* Display error message if the message is invalid */}
-                    {errors.message && <p className="text-danger">{errors.message}</p>}
+                    />
+                    {errors.message && <div id="messageError" className="text-danger">{errors.message}</div>}
                 </div>
 
-                {/* Submit button */}
-                <button type="submit" className="btn btn-primary">Submit</button>
+                {/* Submit Button */}
+                <button type="submit" className="btn btn-primary">
+                    Submit
+                </button>
             </form>
         </section>
     );

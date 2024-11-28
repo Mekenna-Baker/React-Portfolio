@@ -1,25 +1,76 @@
-input, textarea {
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 15px;
-    padding: 10px;
+#contact-page {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 40px 20px; 
+    background-color: #fffbea; /* Soft background */
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+    text-align: center;
+}
+
+#contact-page h2 {
+    font-size: 2rem; 
+    margin-bottom: 30px; 
+    color: #3e5452; 
+}
+
+#contact-page .form-label {
+    text-align: left; 
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3e5452;
+}
+
+#contact-page .form-control {
+    width: 100%; 
+    font-size: 1rem;
+    padding: 10px; 
+    border: 2px solid #ccc; 
     border-radius: 5px;
-    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth focus animation */
 }
 
-form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
- 
-    
+#contact-page .form-control:focus {
+    border-color: #3cb58d; 
+    outline: none;
 }
 
-.container  {
-    background-color: #fdf8e3;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-
+#contact-page .contact-text {
+    height: 200px; /* Increased height for larger message area */
+    resize: vertical; /* Allow vertical resizing */
 }
 
+#contact-page .is-invalid {
+    border-color: #dc3545; 
+}
+
+#contact-page .text-danger {
+    color: #dc3545; /* Error message color */
+    font-size: 0.9rem; 
+    text-align: left;
+}
+
+#contact-page .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#contact-page .btn-primary {
+    background-color: #3cb58d; 
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 30px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact-page .btn-primary:hover {
+    background-color: #2b81ba; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}

@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faLaptopCode, faHeart, faBabyCarriage } from '@fortawesome/free-solid-svg-icons';
 import '../css/AboutMe.css';
 
+
 const AboutMe = () => {
     return (
         <section id="about-me" className="container mt-5">
             <div className="row align-items-center">
                 <div className="col-lg-4">
-                    <img src="public/images/avatar.png" alt="Mekenna Baker" className="img-fluid rounded-circle" />
+                    <img src='/images/avatar.png' alt="Mekenna Baker" className="img-fluid rounded-circle" />
                 </div>
 
                 <div className="col-md-8">
