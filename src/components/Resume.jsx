@@ -4,7 +4,7 @@ import '../css/Resume.css';
 function Resume() {
   return (
     <div className="resume-container">
-      <h1>My Skills</h1>
+      <h1>Skills </h1>
       <div className="skills-boxes">
         <div className="skill-box">
           <h2>Front End</h2>
@@ -12,27 +12,49 @@ function Resume() {
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>React</li>
+            <li>Typescript</li>
             <li>Bootstrap</li>
+            <li>React.js</li>
+            <li>jQuery</li>
           </ul>
         </div>
         <div className="skill-box">
           <h2>Back End</h2>
           <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
+            <li>SQL</li>
+            <li>Postgres</li>
+            <li>Sequelize</li>
+            <li>Apollo</li>
             <li>GraphQL</li>
+            <li>Node.js</li>
+            <li>express.js</li>
+            <li>REST APIs</li>
+            <li>MongoDB</li>
+            <li>Mongoose</li>
+            <li>JWT</li>
+            <li>Application Programming Interfaces (API) </li>
           </ul>
         </div>
         <div className="skill-box">
           <h2>Tools & Platforms</h2>
           <ul>
-            <li>Git/GitHub</li>
-            <li>VS Code</li>
+            <li>Git</li>
+            <li>Vite</li>
             <li>Render</li>
-            <li>Indsomia</li>
+            <li>Object Oriented Programming</li>
+            <li>DOM</li>
+            <li>MERN</li>
+            <li>Vitest</li>
+            <li>Github</li>
+            <li>CircleCI</li>
+            <li>Cypress</li>
+            <li>Insomnia</li>
+            <li>Visual Studio Code</li>
+            <li>MongoDB Compass</li>
+            <li>Command Line Interface</li>
+            <li>CI/CD</li>
+            <li>Prompt Engineering</li>
+            <li>Responsive Web Design</li>
           </ul>
         </div>
       </div>

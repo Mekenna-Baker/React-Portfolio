@@ -8,6 +8,11 @@
     color: var(--dark-accent);
 }
 
-p {
-    color: var(--dark-accent)
+
+#about-me .col-md-8 p {
+    margin-top: 20px; /* Pushes paragraphs inside the "col-md-8" div */
+}
+
+#about-me .col-md-8 {
+    padding-top: 10%;;
 }

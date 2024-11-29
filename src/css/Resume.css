@@ -1,8 +1,15 @@
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3rem; 
+    color: var(--dark-accent);
+}
+
 .skills-boxes {
     display: flex;
     justify-content: center; /* Centers the boxes horizontally */
     flex-wrap: wrap; /* Allows wrapping if the screen is too narrow */
-    gap: 20px; /* Adds spacing between the boxes */
+    gap: 30px; /* Adds spacing between the boxes */
     margin-top: 40px; /* Adds spacing above the boxes */
 }
 
@@ -13,12 +20,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    width: 250px;
-    min-height: 200px;
+    width: 450px; 
+    min-height: 500px; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    justify-content: flex-start; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    
+    
 }
 
 .skill-box:hover {
@@ -28,19 +37,22 @@
 
 .skill-box h2 {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 2rem; 
     color: var(--dark-accent);
+    text-decoration: underline;
 }
 
 .skill-box ul {
-    list-style: none;
     padding: 0;
+    margin: 0;
+    font-size: 1.2rem; 
+    color: var(--light-accent);
+    padding-left: 15px;
 }
 
 .skill-box ul li {
-    margin: 5px 0;
-    font-size: 1.2rem;
-    color: var(--light-accent);
+    margin: 8px 0; /* Increased spacing between list items */
+    text-align: left; 
 }
 
 .resume-download {
@@ -49,13 +61,13 @@
 }
 
 .download-btn {
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: var(--dark-accent);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; 
 }
 
 .download-btn:hover {
