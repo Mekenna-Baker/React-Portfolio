@@ -1,24 +1,49 @@
 # Portfolio
 
-## Description
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
-This is my portfolio project. I have built this project so it can be viewed by other individuals. It houses some of my previous projects, to be viewed and visited, to show and demonstrate my coding knowledge and expierence as I continue to learn and grow. 
+[![Netlify Status](https://img.shields.io/badge/Deployed%20on-Netlify-blue?style=for-the-badge&logo=netlify&logoColor=white)](https://mekennas-portfolio.netlify.app)   ![React Badge](https://img.shields.io/badge/React-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=white)
+
+This is my personal portfolio site. It can be viewed to learn more about me as a person, and a developer. It houses some of my previous works, skillsets, and contact information. 
 
 
-## Table of Contents (Optional)
+## Table of Contents 
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
+- [ContactMe] (#contactme)
 
 ## Installation
 
-Installation is not necesarry as it is deployed via a live link.
+Installation is not necesarry, simply click this link:  https://mekennas-portfolio.netlify.app
 
 ## Usage
 
-This website is meant to be used to view my previous projects, as well as my resume, and get in touch with me
+Learn about me
 
+![alt text](public/images/aboutme.png)
+
+View my Projects
+
+![alt text](public/images/projects.png)
+
+View my skills
+
+![alt text](public/images/resume.png)
+
+and lastly, contact me!
+
+![alt text](public/images/contactme.png)
+
+## License
+
+This project is licensed under MIT. Learn more at: https://choosealicense.com/licenses/mit/
+
+## Contact Me
+
+| Name          | Email                      | LinkedIn                         |
+|---------------|----------------------------|-----------------------------------|
+| Mekenna Baker    | mekenna.drabner@gmail.com     | [LinkedIn](https://www.linkedin.com/in/mekenna--baker/) |
