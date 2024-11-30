@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import emailjs from '@emailjs/browser';
 import '../css/Contact.css';
 
 const Contact = () => {
@@ -39,14 +40,34 @@ const Contact = () => {
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length === 0) {
-            setIsSubmitted(true);
-            setTimeout(() => setIsSubmitted(false), 5000); // Success message visible for 5 seconds
-            setFormData({ name: '', email: '', message: '' });
+            // Use EmailJS to send the email
+            emailjs.send(
+                    'service_1ad1k84',     
+                    'template_w3l2p9a',    
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message,
+                    },
+                    '19G1J4v56ssFXIGcA'      
+                )
+                .then(
+                    (result) => {
+                        console.log(result.text); // Log result for debugging
+                        setIsSubmitted(true);
+                        setTimeout(() => setIsSubmitted(false), 5000); // Success message visible for 5 seconds
+                        setFormData({ name: '', email: '', message: '' }); // Reset form
+                    },
+                    (error) => {
+                        console.error(error.text); // Log any errors
+                        alert('Failed to send email. Please try again later.');
+                    }
+                );
         }
     };
 
     return (
-        <section id= 'contact-page' className="container mt-5">
+        <section id='contact-page' className="container mt-5">
             <h2>
                 Contact Me <FontAwesomeIcon icon={faEnvelope} />
             </h2>
@@ -99,7 +120,7 @@ const Contact = () => {
                         id="message"
                         name="message"
                         placeholder="Enter your message here"
-                       className={`form-control contact-text  ${errors.message ? 'is-invalid' : ''}`}
+                        className={`form-control contact-text  ${errors.message ? 'is-invalid' : ''}`}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         onBlur={validateField}
