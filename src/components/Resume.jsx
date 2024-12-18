@@ -59,7 +59,9 @@ function Resume() {
         </div>
       </div>
       <div className="resume-download">
+      <a href="/Mekenna_TechnicalCV" download>
         <button className="download-btn">Download My Resume</button>
+        </a>
       </div>
     </div>
   );
